@@ -1,0 +1,29 @@
+{
+  "name": "express-template",
+  "version": "0.1.0",
+  "engines": {
+    "node": "10.7.0"
+  },
+  "private": true,
+  "description": "ExpressJS with Mongoose Template",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node ./server/app.js",
+    "dev": "nodemon ./server/app.js",
+    "test": "newman run ./tests/api-tests.postman.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/dit341/express-template.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.12",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "newman": "^4.1.0",
+    "nodemon": "^1.18.4"
+  }
+}
