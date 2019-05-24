@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Api from '@/Api'
+import {Api} from '@/Api'
 import CamelItem from '@/components/CamelItem'
 
 export default {
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getCamels () {
-      Api().get('camels')
+      Api.get('camels')
       .then(reponse => {
         this.camels = reponse.data.camels
       })
