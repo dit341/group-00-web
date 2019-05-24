@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var path = require('path');
-var cors = require('cors')
+var cors = require('cors');
+var history = require('connect-history-api-fallback');
 
 var camelsController = require('./controllers/camels');
 
@@ -28,11 +29,13 @@ app.use(bodyParser.json());
 // HTTP request logger
 app.use(morgan('dev'));
 // Enable cross-origin resource sharing for frontend
-app.options('*', cors())
-app.use(cors())
+app.options('*', cors());
+app.use(cors());
+// Support Vuejs HTML 5 history mode
+app.use(history());
 // Serve static assets (for frontend client)
 var root = path.normalize(__dirname + '/..');
-var client = path.join(root, 'client', 'dist')
+var client = path.join(root, 'client', 'dist');
 app.use(express.static(client));
 app.set('appPath', client);
 
