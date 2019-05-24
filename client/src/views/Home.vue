@@ -9,7 +9,7 @@
 
 <script>
 // @ is an alias to /src
-import {Api} from '@/Api'
+import { Api } from '@/Api'
 
 export default {
   name: 'home',
@@ -24,12 +24,12 @@ export default {
   methods: {
     getMessage () {
       Api.get('/')
-      .then(response => {
-        this.message = response.data.message
-      })
-      .catch(error => {
-        this.message = error
-      })
+        .then(response => {
+          this.message = response.data.message
+        })
+        .catch(error => {
+          this.message = error
+        })
     }
   }
 }

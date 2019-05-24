@@ -13,8 +13,8 @@ export default {
   name: 'camel-item',
   props: ['camel'],
   components: {
-      SvgIcon,
-      CamelIcon
+    SvgIcon,
+    CamelIcon
   }
 }
 </script>

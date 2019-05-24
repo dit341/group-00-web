@@ -1,9 +1,9 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" 
-    :width="getWidth" 
-    :height="getHeight" 
-    :viewBox="getViewBox" 
-    :aria-labelledby="name" 
+  <svg xmlns="http://www.w3.org/2000/svg"
+    :width="getWidth"
+    :height="getHeight"
+    :viewBox="getViewBox"
+    :aria-labelledby="name"
     role="presentation"
   >
     <title :id="name" lang="en">{{name}} icon</title>
