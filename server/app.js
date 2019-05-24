@@ -38,7 +38,7 @@ app.set('appPath', client);
 
 // Define routes
 app.get('/api', function(req, res) {
-    res.json({"message": "Welcome to your DIT341 backend project!"});
+    res.json({"message": "Welcome to your DIT341 backend ExpressJS project!"});
 });
 
 app.use('/api/camels', camelsController);
