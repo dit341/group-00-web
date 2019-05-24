@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var path = require('path');
-var routes = require('./routes');
+
+var camelsController = require('./controllers/camels');
 
 // Variables
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/animals';
@@ -30,8 +31,19 @@ var root = path.normalize(__dirname + '/..');
 app.use(express.static(path.join(root, 'client')));
 app.set('appPath', 'client');
 
-// Import routes
-app.use(routes);
+// Define routes
+app.get('/api', function(req, res) {
+    res.json({"message": "Welcome to your DIT341 backend project!"});
+});
+
+app.use('/api/camels', camelsController);
+
+// All other routes redirect to the index.html
+app.route('/*').get(function (req, res) {
+    var relativeAppPath = req.app.get('appPath');
+    var absoluteAppPath = path.resolve(relativeAppPath);
+    res.sendFile(absoluteAppPath + '/index.html');
+});
 
 // Error handler (must be registered last)
 var env = app.get('env');
