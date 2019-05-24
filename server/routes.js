@@ -7,7 +7,7 @@ router.get('/api', function(req, res) {
 });
 
 // Insert routes below
-router.use('/api/camels', require('./camels'));
+router.use('/api/camels', require('./controllers/camels'));
 
 // All other routes redirect to the index.html
 router.route('/*').get(function (req, res) {

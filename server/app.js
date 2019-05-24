@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var path = require('path');
+var routes = require('./routes');
 
 // Variables
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/animals';
@@ -30,7 +31,7 @@ app.use(express.static(path.join(root, 'client')));
 app.set('appPath', 'client');
 
 // Import routes
-app.use(require('./controllers/index'));
+app.use(routes);
 
 // Error handler (must be registered last)
 var env = app.get('env');
