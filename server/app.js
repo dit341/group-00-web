@@ -28,8 +28,9 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 // Serve static assets (for frontend client)
 var root = path.normalize(__dirname + '/..');
-app.use(express.static(path.join(root, 'client')));
-app.set('appPath', 'client');
+var client = path.join(root, 'client', 'dist')
+app.use(express.static(client));
+app.set('appPath', client);
 
 // Define routes
 app.get('/api', function(req, res) {
@@ -41,8 +42,8 @@ app.use('/api/camels', camelsController);
 // All other routes redirect to the index.html
 app.route('/*').get(function (req, res) {
     var relativeAppPath = req.app.get('appPath');
-    var absoluteAppPath = path.resolve(relativeAppPath);
-    res.sendFile(absoluteAppPath + '/index.html');
+    var indexPath = path.join(relativeAppPath, 'index.html');
+    res.sendFile(indexPath);
 });
 
 // Error handler (must be registered last)
