@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
 var path = require('path');
+var cors = require('cors')
 
 var camelsController = require('./controllers/camels');
 
@@ -26,6 +27,9 @@ var app = express();
 app.use(bodyParser.json());
 // HTTP request logger
 app.use(morgan('dev'));
+// Enable cross-origin resource sharing for frontend
+app.options('*', cors())
+app.use(cors())
 // Serve static assets (for frontend client)
 var root = path.normalize(__dirname + '/..');
 var client = path.join(root, 'client', 'dist')
