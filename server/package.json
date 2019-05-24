@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
-    "test": "newman run ./tests/api-tests.postman.json"
+    "test": "newman run ./tests/server.postman_collection.json"
   },
   "repository": {
     "type": "git",
