@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
-    "test": "newman run ./tests/server.postman_collection.json"
+    "test": "newman run ./tests/server.postman_collection.json",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
