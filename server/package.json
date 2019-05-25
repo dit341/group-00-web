@@ -2,7 +2,7 @@
   "name": "server",
   "version": "0.1.0",
   "engines": {
-    "node": "10.7.0"
+    "node": "10.x"
   },
   "private": true,
   "description": "Template for ExpressJS API with Mongoose for Web and Mobile Engineering (DIT341)",
