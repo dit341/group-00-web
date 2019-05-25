@@ -1,5 +1,14 @@
 {
   "vetur.validation.template": false,
+  "vetur.format.enable":true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      // Prettier option here
+      "semi": false,
+      "singleQuote": true,
+      "spaceBeforeFunctionParen": true
+    }
+  },
   "eslint.validate": [
     {
       "language": "vue",
