@@ -1,9 +1,9 @@
 # Backend and Frontend Template
 
-* Backend: [server](./server/README.md)
+* [server](./server/README.md) backend
   * [FAQ](./server/docs/FAQ.md)
   * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
-* Frontend: [client](./client/README.md)
+* [client](./client/README.md) frontend
 * [Deployment](./docs/DEPLOYMENT.md)
 
 ## Getting started
