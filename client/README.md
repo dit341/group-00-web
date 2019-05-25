@@ -1,11 +1,22 @@
-# client
+# Client – Vue.js Frontend
+
+This [Vue.js](https://vuejs.org/) template provides sample code how to connect to the ExpressJS backend.
 
 ## Requirements
 
+* [Git](https://git-scm.com/) (v2)
 * [Node.js (v10)](https://nodejs.org/en/)
-* Backend running on `http://localhost:3000` (config in `.env`)
+* [Backend](../server/README.md) running on `http://localhost:3000` (config in [.env](.env)`)
+* [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as IDE
+  * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) plugin for Vue tooling
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugin for linting Vue, JS, and HTML code
+  * [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) plugin for debugging
+* [Google Chrome](https://www.google.com/chrome/) as web browser
+  * [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en) plugin for debugging
 
 ## Project setup
+
+Installs all project dependencies specified in [package.json](./package.json).
 
 ```sh
 npm install
@@ -13,11 +24,15 @@ npm install
 
 ### Compiles and hot-reloads for development
 
+Automatically recompiles and refreshes the browser tab if you save any changes to local files.
+
 ```sh
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
+Builds the production-ready website into the `dist` directory.
 
 ```sh
 npm run build
@@ -47,12 +62,10 @@ npm run lint
 
 ## Debug in VSCode with Chrome
 
-Setup: Install the VSCode plugin [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-
 1. Set a breakpoint in VSCode
 2. Serve the client `npm run serve`
 3. In the menu: Debug > Start Debugging (F5).
 
 More infos in the [Vuejs Debug Docs](https://vuejs.org/v2/cookbook/debugging-in-vscode.html).
 
-> Chrome will launch with a separate user profile in a temp folder as described in the VSCode [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+> Chrome will launch with a separate user profile in a temp folder as described in the VSCode [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome). It is recommended to install the [vue-devtools](https://github.com/vuejs/vue-devtools) [Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) there.
