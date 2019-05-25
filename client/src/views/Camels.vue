@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>List of {{ camels.length }} camels</h1>
     <b-list-group>
-      <camel-item v-for="camel in camels" :key="camel._id" :camel="camel"></camel-item>
+      <camel-item v-for="camel in camels" :key="camel._id" :camel="camel" @delete-camel="deleteCamel"></camel-item>
     </b-list-group>
   </div>
 </template>
@@ -33,6 +33,17 @@ export default {
         })
         .then(() => {
         // This code is always executed (after success or error).
+        })
+    },
+    deleteCamel (id) {
+      Api.delete(`/camels/${id}`)
+        .then(response => {
+          console.log(response.data.message)
+          var index = this.camels.findIndex(camel => camel._id === id)
+          this.camels.splice(index, 1)
+        })
+        .catch(error => {
+          console.log(error)
         })
     }
   },

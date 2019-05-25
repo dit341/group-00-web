@@ -8,6 +8,13 @@ router.get('/', function (req, res) {
         { "_id": 1, "color": "blue", "position": 2 },
         { "_id": 2, "color": "green", "position": 3 }
     ] });
-})
+});
 
-module.exports = router
+router.delete('/:id', function (req, res) {
+    var id = req.params.id;
+    res.json({
+        "message": `Deleted camel with id ${id}`
+    });
+});
+
+module.exports = router;
