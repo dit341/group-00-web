@@ -4,6 +4,6 @@
   "description": "This collection package integrates the server and client for deployment.",
   "main": "server/app.js",
   "scripts": {
-    "postinstall": "(cd server && npm install); (cd client && npm install && VUE_APP_API_ENDPOINT=http://localhost:${PORT:-3000}/api npm run build)"
+    "postinstall": "(cd server && npm install); (cd client && npm install && npm install --dev && VUE_APP_API_ENDPOINT=http://localhost:${PORT:-3000}/api npm run build)"
   }
 }
