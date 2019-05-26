@@ -1,7 +1,8 @@
 <template>
   <b-list-group-item :style="{ color: camel.color }">
+    <img alt="Camel" src="../assets/camel.jpg">
     <svg-icon size="20" viewBox="0 0 552.83 552.83" :color="camel.color"><camel-icon /></svg-icon>
-    {{ camel.color }} : {{ camel.position }}
+    {{ camel.color }} is at position {{ camel.position }}
     <b-button type="button" class="close" @click="deleteCamel(camel._id)">&times;</b-button>
   </b-list-group-item>
 </template>
@@ -26,4 +27,8 @@ export default {
 </script>
 
 <style scoped>
+img {
+  width: 33px;
+  margin-right: 10px;
+}
 </style>
