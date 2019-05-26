@@ -28,12 +28,14 @@ var app = express();
 app.use(bodyParser.json());
 // HTTP request logger
 app.use(morgan('dev'));
+
+// Config for frontend in production mode
 // Enable cross-origin resource sharing for frontend
 app.options('*', cors());
 app.use(cors());
 // Support Vuejs HTML 5 history mode
 app.use(history());
-// Serve static assets (for frontend client)
+// Serve static assets
 var root = path.normalize(__dirname + '/..');
 var client = path.join(root, 'client', 'dist');
 app.use(express.static(client));
@@ -50,7 +52,7 @@ app.use('/api/*', function (req, res) {
     res.status(404).json({ 'message': 'Not Found' });
 });
 
-// All other routes redirect to the index.html
+// All other routes redirect to the index.html (frontend production)
 app.get('/*', function (req, res) {
     var appPath = req.app.get('appPath');
     var indexPath = path.join(appPath, 'index.html');
