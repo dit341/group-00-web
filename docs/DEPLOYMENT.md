@@ -21,6 +21,8 @@ Find a more detailed tutorial [here](https://developer.mozilla.org/en-US/docs/Le
 
 ## Deploy to Heroku
 
+### Setup
+
 Sign up for a free [Heroku account](https://signup.heroku.com/?c=70130000001x9jFAAQ).
 
 Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and follow these steps:
@@ -29,6 +31,15 @@ Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and f
 heroku create --region eu
 heroku config:set MONGODB_URI='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'
 heroku config:set NODE_ENV='production'
+export API_ENDPOINT=$(heroku apps:info -s  | grep web_url | cut -d= -f2)
+heroku config:set VUE_APP_API_ENDPOINT=$API_ENDPOINT
+```
+
+To set the API_ENDPOINT, you can also manually extract the `web_url` from `heroku apps:info -s`. For example: `API_ENDPOINT=https://aqueous-crag-12345.herokuapp.com`
+
+### Deploy
+
+```bash
 git push heroku master
 heroku open
 ```
