@@ -36,11 +36,13 @@ npm start
 
 ## Run the Postman Tests
 
-Requires a running server.
+Starts a new server on another port and runs tests against a test database (default `server_test`).
 
 ```bash
 npm test
 ```
+
+> The test database is dropped before each test execution.
 
 ## Postman Tests
 

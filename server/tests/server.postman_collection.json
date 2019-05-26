@@ -7,6 +7,18 @@
 	"item": [
 		{
 			"name": "GET /api",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c67a5d47-3a70-45b0-8001-b37eb933382f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -92,6 +104,43 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE /api/camels/:id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "927025af-5584-4888-a286-730662635095",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/camels/{{camelId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"camels",
+						"{{camelId}}"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -118,7 +167,7 @@
 	],
 	"variable": [
 		{
-			"id": "b026b325-9454-4626-be76-81bd029e529e",
+			"id": "c617322c-8b4e-413c-9e55-205e4975c124",
 			"key": "host",
 			"value": "http://localhost:3000",
 			"type": "string"
