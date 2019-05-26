@@ -9,7 +9,13 @@
 			"name": "GET /api",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{host}}/api",
 					"host": [
@@ -61,7 +67,13 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{host}}/api/camels",
 					"host": [
@@ -70,6 +82,12 @@
 					"path": [
 						"api",
 						"camels"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
 					]
 				}
 			},
@@ -100,7 +118,7 @@
 	],
 	"variable": [
 		{
-			"id": "ba4e069a-12a9-4873-b278-3e4590f10c8f",
+			"id": "b026b325-9454-4626-be76-81bd029e529e",
 			"key": "host",
 			"value": "http://localhost:3000",
 			"type": "string"
