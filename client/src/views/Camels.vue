@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>List of {{ camels.length }} camels</h1>
+    <b-button type="button" class="createButton" @click="createCamel()">Create Camel</b-button>
     <b-list-group>
       <camel-item v-for="camel in camels" :key="camel._id" :camel="camel" @delete-camel="deleteCamel"></camel-item>
     </b-list-group>
@@ -45,6 +46,27 @@ export default {
         .catch(error => {
           console.log(error)
         })
+    },
+    createCamel () {
+      var randomCamel = {
+        color: this.getRandomColor(),
+        position: this.getRandomInt(10)
+      }
+      Api.post('/camels', randomCamel)
+        .then(response => {
+          this.camels.push(response.data)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
+    getRandomInt (max) {
+      return Math.floor(Math.random() * max)
+    },
+    getRandomColor () {
+      var colors = ['orange', 'green', 'red', 'blue']
+      var index = this.getRandomInt(colors.length)
+      return colors[index]
     }
   },
   components: {
@@ -57,5 +79,8 @@ export default {
 <style scoped>
 a {
   color: #42b983;
+}
+.createButton {
+  margin-bottom: 20px;
 }
 </style>

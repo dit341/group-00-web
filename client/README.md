@@ -49,6 +49,10 @@ npm run lint
 
 > The Vue.js community [favors](https://forum.vuejs.org/t/semicolon-less-code-my-thoughts/4229) omitting optional semicolons `;` in Javascript.
 
+## Axios HTTP Library
+
+* [Docs](https://github.com/axios/axios)
+
 ## Bootstrap 4 and BootstrapVue
 
 * [BootstrapVue Components](https://bootstrap-vue.js.org/docs/components)

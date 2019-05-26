@@ -25,3 +25,5 @@ npm run dev
 cd client && npm install
 npm run serve
 ```
+
+> Open the `server` and `client` in separate VSCode windows or open the combined [backend-frontend.code-workspace](./backend-frontend.code-workspace).
