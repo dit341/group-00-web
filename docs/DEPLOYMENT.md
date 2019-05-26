@@ -31,11 +31,11 @@ Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and f
 heroku create --region eu
 heroku config:set MONGODB_URI='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'
 heroku config:set NODE_ENV='production'
-export API_ENDPOINT=$(heroku apps:info -s  | grep web_url | cut -d= -f2)
+export API_ENDPOINT="$(heroku apps:info -s  | grep web_url | cut -d= -f2)api"
 heroku config:set VUE_APP_API_ENDPOINT=$API_ENDPOINT
 ```
 
-To set the API_ENDPOINT, you can also manually extract the `web_url` from `heroku apps:info -s`. For example: `API_ENDPOINT=https://aqueous-crag-12345.herokuapp.com`
+To set the API_ENDPOINT, you can also manually extract the `web_url` from `heroku apps:info -s`. For example: `API_ENDPOINT=https://aqueous-crag-12345.herokuapp.com/api`
 
 ### Deploy
 
