@@ -1,7 +1,7 @@
-image: node:latest
+image: node:10
 
 services:
-  - mongo:latest
+  - mongo:4.1
 
 # Cache modules in between jobs per-branch
 cache:
@@ -10,7 +10,7 @@ cache:
     - server/node_modules/
 
 variables:
-  MONGODB_URI: "mongodb://mongo:27017/animals"
+  MONGODB_URI: "mongodb://mongo:27017/animals-test"
 
 test:
   tags:
