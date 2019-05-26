@@ -1,20 +1,33 @@
 var express = require('express');
 var router = express.Router();
-// var Camel = require('../models/camel');
+var Camel = require('../models/camel');
 
-router.get('/', function (req, res) {
-    var camels = { 'camels': [
-        { '_id': 0, 'color': 'orange', 'position': 1 },
-        { '_id': 1, 'color': 'blue', 'position': 2 },
-        { '_id': 2, 'color': 'green', 'position': 3 }
-    ] };
-    res.json(camels);
+// Return a list of all camels
+router.get('/', function(req, res, next) {
+    Camel.find(function(err, camels) {
+        if (err) { return next(err); }
+        res.json({'camels': camels});
+    });
 });
 
-router.delete('/:id', function (req, res) {
+// Create a new camel
+router.post('/', function(req, res, next) {
+    var camel = new Camel(req.body);
+    camel.save(function(err) {
+        if (err) { return next(err); }
+        res.status(201).json(camel);
+    });
+});
+
+// Return the camel with the given ID
+router.get('/:id', function(req, res, next) {
     var id = req.params.id;
-    res.json({
-        'message': `Deleted camel with id ${id}`
+    Camel.findById(id, function(err, camel) {
+        if (err) { return next(err); }
+        if (camel === null) {
+            return res.status(404).json({'message': 'Camel not found'});
+        }
+        res.json(camel);
     });
 });
 
