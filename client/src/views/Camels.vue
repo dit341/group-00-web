@@ -33,7 +33,7 @@ export default {
           console.log(error)
         })
         .then(() => {
-        // This code is always executed (after success or error).
+          // This code is always executed (after success or error).
         })
     },
     deleteCamel (id) {
