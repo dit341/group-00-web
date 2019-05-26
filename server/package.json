@@ -12,8 +12,8 @@
     "dev": "nodemon ./app.js",
     "lint": "eslint .",
     "test": "npm run newman-server",
-    "test-local": "export PORT=3000 && npm run newman",
-    "newman-server": "export MONGODB_URI=mongodb://localhost:27017/server_test && export PORT=3001 && npm run dropdb && run-p --race start newman-wait",
+    "test-local": "npm run newman",
+    "newman-server": "export MONGODB_URI=${MONGODB_URI:-mongodb://localhost:27017/server_test} && export PORT=${PORT:-3001} && npm run dropdb && run-p --race start newman-wait",
     "newman-wait": "wait-on http://localhost:${PORT:-3001}/api && npm run newman",
     "newman": "newman run ./tests/server.postman_collection.json --env-var host=http://localhost:${PORT:-3001}",
     "dropdb": "node ./tests/dropdb.js"

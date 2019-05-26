@@ -16,7 +16,4 @@ test:
   tags:
     - docker
   script:
-    - echo $MONGODB_URI
-    - printenv
-    - npm install -g npm@latest
-    - cd server && npm install && export MONGODB_URI=mongodb://mongo:27017/animals && npm test
+    - cd server && npm install && npm test
