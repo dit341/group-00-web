@@ -43,19 +43,24 @@ app.set('appPath', client);
 app.get('/api', function(req, res) {
     res.json({'message': 'Welcome to your DIT341 backend ExpressJS project!'});
 });
-
 app.use('/api/camels', camelsController);
 
+// Catch all non-error handler for api (i.e., 404 Not Found)
+app.use('/api/*', function (req, res) {
+    res.status(404).json({ 'message': 'Not Found' });
+});
+
 // All other routes redirect to the index.html
-app.route('/*').get(function (req, res) {
-    var relativeAppPath = req.app.get('appPath');
-    var indexPath = path.join(relativeAppPath, 'index.html');
+app.get('/*', function (req, res) {
+    var appPath = req.app.get('appPath');
+    var indexPath = path.join(appPath, 'index.html');
     res.sendFile(indexPath);
 });
 
-// Error handler (must be registered last)
+// Error handler (i.e., when exception is thrown) must be registered last
 var env = app.get('env');
-app.use(function(err, req, res) {
+// eslint-disable-next-line no-unused-vars
+app.use(function(err, req, res, next) {
     console.error(err.stack);
     var err_res = {
         'message': err.message,
