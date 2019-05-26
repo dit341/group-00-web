@@ -1,7 +1,7 @@
-image: node:10
+image: node:latest
 
 services:
-  - mongo:4.1
+  - mongo:latest
 
 # Cache modules in between jobs per-branch
 cache:
@@ -16,4 +16,6 @@ test:
   tags:
     - docker
   script:
-    - cd server && npm install && npm test
+    - printenv
+    - npm install -g npm@latest
+    - cd server && npm install && MONGODB_URI=mongodb://mongo:27017/animals npm test
