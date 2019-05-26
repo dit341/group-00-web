@@ -12,9 +12,6 @@ cache:
 variables:
   MONGODB_URI: "mongodb://mongo:27017/animals"
 
-test_variables:
-  MONGODB_URI: "mongodb://mongo:27017/animals"
-
 test:
   tags:
     - docker
