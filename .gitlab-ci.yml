@@ -1,0 +1,19 @@
+image: node:10
+
+services:
+  - mongo:4.1
+
+# Cache modules in between jobs per-branch
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - server/node_modules/
+
+variables:
+  MONGODB_URI: "mongodb://mongo:27017/animals"
+
+test:
+  tags:
+    - docker
+  script:
+    - cd server && npm install && npm test
