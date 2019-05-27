@@ -1,4 +1,4 @@
-image: node:10
+image: node:10-alpine
 
 # Cache modules in between jobs per-branch
 cache:
@@ -26,7 +26,7 @@ test:
   tags:
     - docker
   services:
-    - mongo:4.1
+    - mvertes/alpine-mongo:latest
   variables:
     MONGODB_URI: "mongodb://mongo:27017/animals-test"
   script:
@@ -36,7 +36,16 @@ deploy:
   stage: deploy
   tags:
     - docker
+  image: ruby:alpine
   script:
-  - echo "Deploy master to production"
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+  environment:
+    name: production
+    url: https://$HEROKU_APP_NAME.herokuapp.com/
   only:
-  - master
+    refs:
+      - master
+    variables:
+      - $HEROKU_APP_NAME
+      - $HEROKU_API_KEY
