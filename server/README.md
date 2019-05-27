@@ -7,9 +7,9 @@ This [ExpressJS](https://expressjs.com/) template provides the basic infrastruct
 
 ## Requirements
 
-* [Git](https://git-scm.com/) (v2)
 * [Nodejs](https://nodejs.org/en/) (v10)
-* [MongoDB](https://www.mongodb.com/) (v4) must be running locally on port 27017
+* [MongoDB](https://www.mongodb.com/download-center/community?jmp=nav) (v4) must be running locally on port 27017
+  * See [github/joe4dev/dit032-setup](https://github.com/joe4dev/dit032-setup) for installation guides
 * [Postman](https://www.getpostman.com/downloads/) (v7) for testing
 
 ## Project setup

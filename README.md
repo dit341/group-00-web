@@ -1,20 +1,26 @@
 # Backend and Frontend Template
 
-* [server](./server/README.md) backend
+* [Server](./server/README.md) backend
   * [FAQ](./server/docs/FAQ.md)
   * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
-* [client](./client/README.md) frontend
+* [Client](./client/README.md) frontend
 * [Deployment](./docs/DEPLOYMENT.md)
+
+## Requirements
+
+* [Git](https://git-scm.com/) (v2)
+* [Server Requirements](./server/README.md#Requirements)
+* [Client Requirements](./client/README.md#Requirements)
 
 ## Getting started
 
 ```bash
 # Without Gitlab Registration
-git clone https://gitlab.com/dit341/express-template.git
+git clone https://git.ita.chalmers.se/courses/dit341/group-00-web
 # With Gitlab Registration
-git clone git@gitlab.com:YOUR_USERNAME/express-template.git
+git clone git@git.ita.chalmers.se:courses/dit341/group-00-web.git
 
-# Change into the template directory
+# Change into the directory
 cd group-00-web
 
 # Setup backend
@@ -26,4 +32,6 @@ cd client && npm install
 npm run serve
 ```
 
-> Open the `server` and `client` in separate VSCode windows or open the combined [backend-frontend.code-workspace](./backend-frontend.code-workspace).
+## Visual Studio Code (VSCode)
+
+Open the `server` and `client` in separate VSCode workspaces or open the combined [backend-frontend.code-workspace](./backend-frontend.code-workspace). Otherwise, workspace-specific settings don't work properly.

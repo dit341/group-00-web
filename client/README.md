@@ -4,9 +4,8 @@ This [Vue.js](https://vuejs.org/) template provides sample code how to connect t
 
 ## Requirements
 
-* [Git](https://git-scm.com/) (v2)
-* [Node.js (v10)](https://nodejs.org/en/)
-* [Backend](../server/README.md) running on `http://localhost:3000` (config in [.env](.env)`)
+* [Node.js](https://nodejs.org/en/) (v10)
+* [Server](../server/README.md) backend running on `http://localhost:3000`
 * [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as IDE
   * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) plugin for Vue tooling
   * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugin for linting Vue, JS, and HTML code
@@ -51,7 +50,7 @@ npm run lint
 
 ## Axios HTTP Library
 
-* [Docs](https://github.com/axios/axios)
+* [Documentation with Examples](https://github.com/axios/axios#axios)
 
 ## Bootstrap 4 and BootstrapVue
 
