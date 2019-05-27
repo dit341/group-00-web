@@ -3,17 +3,42 @@ image: node:10
 services:
   - mongo:4.1
 
+variables:
+  MONGODB_URI: "mongodb://mongo:27017/animals-test"
+
 # Cache modules in between jobs per-branch
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - server/node_modules/
 
-variables:
-  MONGODB_URI: "mongodb://mongo:27017/animals-test"
+stages:
+  - build
+  - test
+  - deploy
 
-test:
+before_script:
+  - cd server
+
+build:
+  stage: build
   tags:
     - docker
   script:
-    - cd server && npm install && npm test
+    - npm install
+
+test:
+  stage: test
+  tags:
+    - docker
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  tags:
+    - docker
+  script:
+  - echo "Deploy master to production"
+  only:
+  - master
