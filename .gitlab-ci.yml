@@ -26,7 +26,8 @@ test:
   tags:
     - docker
   services:
-    - mvertes/alpine-mongo:latest
+    - name: mvertes/alpine-mongo:latest
+      alias: mongo
   variables:
     MONGODB_URI: "mongodb://mongo:27017/animals-test"
   script:
