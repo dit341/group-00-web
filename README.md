@@ -1,5 +1,4 @@
-Backend and Frontend Template [![Pipeline](https://git.ita.chalmers.se/courses/dit341/group-00-web/badges/master/pipeline.svg)](https://git.ita.chalmers.se/courses/dit341/group-00-web/commits/master)
-=========
+# Backend and Frontend Template
 
 * [server](./server/README.md) backend
   * [FAQ](./server/docs/FAQ.md)
