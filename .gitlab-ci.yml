@@ -28,7 +28,7 @@ test:
   services:
     - mongo:4.1
   variables:
-    - MONGODB_URI: "mongodb://mongo:27017/animals-test"
+    MONGODB_URI: "mongodb://mongo:27017/animals-test"
   script:
     - npm test
 
