@@ -11,14 +11,12 @@ stages:
   - test
   - deploy
 
-before_script:
-  - cd server
-
 build:
   stage: build
   tags:
     - docker
   script:
+    - cd server
     - npm install
 
 test:
@@ -31,6 +29,7 @@ test:
   variables:
     MONGODB_URI: "mongodb://mongo:27017/animals-test"
   script:
+    - cd server
     - npm test
 
 deploy:
