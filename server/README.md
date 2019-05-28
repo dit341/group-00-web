@@ -7,10 +7,9 @@ This [ExpressJS](https://expressjs.com/) template provides the basic infrastruct
 
 ## Requirements
 
-* [Nodejs](https://nodejs.org/en/) (v10)
-* [MongoDB](https://www.mongodb.com/download-center/community?jmp=nav) (v4) must be running locally on port 27017
-  * See [github/joe4dev/dit032-setup](https://github.com/joe4dev/dit032-setup) for installation guides
-* [Postman](https://www.getpostman.com/downloads/) (v7) for testing
+* [Node.js](https://nodejs.org/en/download/) (v10) => installation instructions for [Linux](https://github.com/nodesource/distributions)
+* [MongoDB](https://www.mongodb.com/download-center/community?jmp=nav) (v4) must be running locally on port 27017 => installation instructions for [macOS](https://github.com/joe4dev/dit032-setup/blob/master/macOS.md#mongodb), [Windows](https://github.com/joe4dev/dit032-setup/blob/master/Windows.md#mongodb), [Linux](https://github.com/joe4dev/dit032-setup/blob/master/Linux.md#mongodb)
+* [Postman](https://www.getpostman.com/downloads/) (v7) for API testing
 
 ## Project setup
 
@@ -42,7 +41,7 @@ Starts a new server on another port and runs tests against a test database (defa
 npm test
 ```
 
-> The test database is dropped before each test execution.
+> The test database is dropped before each test execution. Adjust your tests to support this clean state.
 
 ## Postman Tests
 

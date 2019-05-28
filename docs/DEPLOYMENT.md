@@ -6,7 +6,7 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 
 * Free [mLab](https://mlab.com/) account
 * Free [Heroku](https://www.heroku.com/) account
-* Installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 > All these services have a **free** tier and can be used **WITHOUT** a credit card.
 

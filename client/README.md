@@ -4,8 +4,8 @@ This [Vue.js](https://vuejs.org/) template provides sample code how to connect t
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en/) (v10)
 * [Server](../server/README.md) backend running on `http://localhost:3000`
+* [Node.js](https://nodejs.org/en/download/) (v10) => installation instructions for [Linux](https://github.com/nodesource/distributions)
 * [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as IDE
   * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) plugin for Vue tooling
   * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugin for linting Vue, JS, and HTML code
