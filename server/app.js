@@ -29,18 +29,6 @@ app.use(bodyParser.json());
 // HTTP request logger
 app.use(morgan('dev'));
 
-// Config for frontend in production mode
-// Enable cross-origin resource sharing for frontend
-app.options('*', cors());
-app.use(cors());
-// Support Vuejs HTML 5 history mode
-app.use(history());
-// Serve static assets
-var root = path.normalize(__dirname + '/..');
-var client = path.join(root, 'client', 'dist');
-app.use(express.static(client));
-app.set('appPath', client);
-
 // Define routes
 app.get('/api', function(req, res) {
     res.json({'message': 'Welcome to your DIT341 backend ExpressJS project!'});
@@ -52,12 +40,16 @@ app.use('/api/*', function (req, res) {
     res.status(404).json({ 'message': 'Not Found' });
 });
 
-// All other routes redirect to the index.html (frontend production)
-app.get('/*', function (req, res) {
-    var appPath = req.app.get('appPath');
-    var indexPath = path.join(appPath, 'index.html');
-    res.sendFile(indexPath);
-});
+// Configuration for serving frontend in production mode
+// Enable cross-origin resource sharing for frontend
+app.options('*', cors());
+app.use(cors());
+// Support Vuejs HTML 5 history mode
+app.use(history());
+// Serve static assets
+var root = path.normalize(__dirname + '/..');
+var client = path.join(root, 'client', 'dist');
+app.use(express.static(client));
 
 // Error handler (i.e., when exception is thrown) must be registered last
 var env = app.get('env');
@@ -79,7 +71,7 @@ app.listen(port, function(err) {
     if (err) throw err;
     console.log(`Express server listening on port ${port}, in ${env} mode`);
     console.log(`Backend: http://localhost:${port}/api/`);
-    console.log(`Frontend: http://localhost:${port}/`);
+    console.log(`Frontend (production): http://localhost:${port}/`);
 });
 
 module.exports = app;
