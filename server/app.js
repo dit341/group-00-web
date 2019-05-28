@@ -28,6 +28,9 @@ var app = express();
 app.use(bodyParser.json());
 // HTTP request logger
 app.use(morgan('dev'));
+// Enable cross-origin resource sharing for frontend must be registered before api
+app.options('*', cors());
+app.use(cors());
 
 // Define routes
 app.get('/api', function(req, res) {
@@ -41,9 +44,6 @@ app.use('/api/*', function (req, res) {
 });
 
 // Configuration for serving frontend in production mode
-// Enable cross-origin resource sharing for frontend
-app.options('*', cors());
-app.use(cors());
 // Support Vuejs HTML 5 history mode
 app.use(history());
 // Serve static assets
