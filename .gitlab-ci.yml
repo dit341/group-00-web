@@ -30,7 +30,7 @@ test:
     MONGODB_URI: "mongodb://mongo:27017/animals-test"
   script:
     - cd server
-    - npm test
+    - npm run ci-test
 
 deploy:
   stage: deploy

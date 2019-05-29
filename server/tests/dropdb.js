@@ -3,6 +3,11 @@ var mongoose = require('mongoose');
 // Variables
 var mongoURI = process.env.MONGODB_URI;
 
+if (!mongoURI) {
+    console.error('Missing MONGODB_URI for dropping test database.');
+    process.exit(1);
+}
+
 // Drop database
 mongoose.connect(mongoURI, { useNewUrlParser: true }, function (err) {
     if (err) {
