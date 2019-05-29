@@ -5,7 +5,7 @@
       <camel-icon/>
     </svg-icon>
     {{ camel.color }} is at position {{ camel.position }}
-    <b-button type="button" class="close" @click="deleteCamel(camel._id)">&times;</b-button>
+    <b-button type="button" class="close" @click="$emit('delete-camel', camel._id)">&times;</b-button>
   </b-list-group-item>
 </template>
 
@@ -19,11 +19,6 @@ export default {
   components: {
     SvgIcon,
     CamelIcon
-  },
-  methods: {
-    deleteCamel (id) {
-      this.$emit('delete-camel', id)
-    }
   }
 }
 </script>
