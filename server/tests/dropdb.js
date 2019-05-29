@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // Variables
-var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/server_test';
+var mongoURI = process.env.MONGODB_URI;
 
 // Drop database
 mongoose.connect(mongoURI, { useNewUrlParser: true }, function (err) {
