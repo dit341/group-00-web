@@ -7,11 +7,13 @@ This [ExpressJS](https://expressjs.com/) template provides the basic infrastruct
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en/download/) (v10) => installation instructions for [Linux](https://github.com/nodesource/distributions)
+* [Node.js](https://nodejs.org/en/download/) (v10) => installation instructions for [Linux](https://github.com/nodesource/distributions), use installers for macOS and Windows (don't forget to restart your Bash shell)
 * [MongoDB](https://www.mongodb.com/download-center/community?jmp=nav) (v4) must be running locally on port 27017 => installation instructions for [macOS](https://github.com/joe4dev/dit032-setup/blob/master/macOS.md#mongodb), [Windows](https://github.com/joe4dev/dit032-setup/blob/master/Windows.md#mongodb), [Linux](https://github.com/joe4dev/dit032-setup/blob/master/Linux.md#mongodb)
 * [Postman](https://www.getpostman.com/downloads/) (v7) for API testing
 
 ## Project setup
+
+Make sure, you are in the server directory `cd server`
 
 Installs all project dependencies specified in [package.json](./package.json).
 

@@ -12,14 +12,17 @@ The version numbers in brackets indicate the tested versions but feel free to us
 You can also use alternative tools if you know how to configure them (e.g., Firefox instead of Chrome).
 
 * [Git](https://git-scm.com/) (v2) => [installation instructions](https://www.atlassian.com/git/tutorials/install-git)
+  * [Add your Git username and set your email](https://docs.gitlab.com/ce/gitlab-basics/start-using-git.html#add-your-git-username-and-set-your-email)
+    * `git config --global user.name "YOUR_USERNAME"` => check `git config --global user.name`
+    * `git config --global user.email "email@example.com"` => check `git config --global user.email`
   * > **Windows users**: Use the [Git Bash](https://www.atlassian.com/git/tutorials/git-bash) shell from your Git installation or the Bash shell from the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run **all** shell commands for this project!
 * [Chalmers GitLab](https://git.ita.chalmers.se/) => Login with your **Chalmers CID** (contact [support@chalmers.se](mailto:support@chalmers.se) if you don't have one)
   * DIT341 course group: https://git.ita.chalmers.se/courses/dit341
   * [Setup SSH key with Gitlab](https://docs.gitlab.com/ee/ssh/)
     * Create an SSH key pair `ssh-keygen -t ed25519 -C "email@example.com"` (skip if you already have one)
-    * Add your public SSH key to your Gitlab profile: https://git.ita.chalmers.se/profile/keys
+    * Add your public SSH key to your Gitlab profile under https://git.ita.chalmers.se/profile/keys
+    * Make sure the email you use to commit is registered under https://git.ita.chalmers.se/profile/emails
   * Checkout the [Backend-Frontend](https://git.ita.chalmers.se/courses/dit341/group-00-web) template `git clone git@git.ita.chalmers.se:courses/dit341/group-00-web.git`
-  * Checkout the [Android](https://git.ita.chalmers.se/courses/dit341/group-00-android) template `git clone git@git.ita.chalmers.se:courses/dit341/group-00-android.git`
 * [Server Requirements](./server/README.md#Requirements)
 * [Client Requirements](./client/README.md#Requirements)
 
