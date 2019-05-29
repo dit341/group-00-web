@@ -15,6 +15,8 @@ This [Vue.js](https://vuejs.org/) template provides sample code how to connect t
 
 ## Project setup
 
+Make sure, you are in the client directory `cd client`
+
 Installs all project dependencies specified in [package.json](./package.json).
 
 ```sh
