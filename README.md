@@ -5,6 +5,7 @@
   * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
 * [Client](./client/README.md) frontend
 * [Deployment](./docs/DEPLOYMENT.md)
+* [Local Deployment](./docs/LOCAL_DEPLOYMENT.md)
 
 ## Requirements
 
