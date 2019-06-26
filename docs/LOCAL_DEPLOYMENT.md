@@ -9,20 +9,22 @@ These steps describe how you can deploy your app locally in production mode if y
 
 ## Deploy Locally
 
-Make sure you have all dependencies installed for the server and client.
+> Make sure you have all dependencies installed for the server and client (using `npm install`).
 
 1. Change into the root directory `cd group-00-web`
-2. Set the environment variable `NODE_ENV` to `production`
-    * macOS/Linux: `export NODE_ENV=production` (check with `echo $NODE_ENV%`)
+2. Set the environment variable `NODE_ENV` for the server:
+    * macOS/Linux: `export NODE_ENV=production` (check with `echo $NODE_ENV`)
     * Windows: `set NODE_ENV "production"` (check with `echo %NODE_ENV%`)
-3. Set the environment variable `MONGODB_URI` to `mongodb://localhost:27017/animals-production` (change the DB name animals according to your project)
-    * macOS/Linux: `export MONGODB_URI=mongodb://localhost:27017/animals-production` (check with `echo $MONGODB_URI%`)
-    * Windows: `set MONGODB_URI "mongodb://localhost:27017/animals-production"` (check with `echo %MONGODB_URI%`)
-4. Configure the backend host for the Vue.js production build by copying the example environment file: `cp client/.env.sample client/.env` (Heroku uses port 5000 by default)
+3. Set the environment variable `MONGODB_URI` for the server (change the database name "animals" according to your project):
+    * macOS/Linux: `export MONGODB_URI=mongodb://localhost:27017/animals-production`
+    * Windows: `set MONGODB_URI "mongodb://localhost:27017/animals-production"`
+4. Set the environment variable `VUE_APP_API_ENDPOINT` for the client production build:
+    * macOS/Linux: `export VUE_APP_API_ENDPOINT=http://localhost:5000/api`
+    * Windows: `set VUE_APP_API_ENDPOINT "http://localhost:5000/api"`
 5. Build the minified Vue.js production assets via `npm run build --prefix client`
 6. [Run the Heroku app locally](https://devcenter.heroku.com/articles/heroku-local) via `heroku local`
 
-The terminal output should look like this:
+The terminal output should look like this (Heroku uses port 5000 by default):
 
 ```none
 ➜  group-00-web git:(master) ✗ heroku local
