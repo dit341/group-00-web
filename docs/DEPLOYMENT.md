@@ -4,7 +4,7 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 
 ## Requirements
 
-* Free [mLab](https://mlab.com/) account
+* Free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account
 * Free [Heroku](https://www.heroku.com/) account
 * [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
@@ -12,15 +12,20 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 
 ## Setup Hosted MongoDB
 
-1. Sign up for a free [mLab account](https://mlab.com/signup/)
-2. Click *Create New* in the *MongoDB Deployments* section
-3. Select the AWS *SANDBOX FREE* plan type and click continue
-4. Select the *Europe (Ireland) (eu-west-1)* region and click continue
-5. Choose a database name and click continue
-6. Click *Submit Order*
-7. Select the *Users* tab and click *Add database user*
-8. Choose a username and password and click *Create*
-9. Copy the MongoDB URI shown above including the dbuser and dbpassword you choose! Example: `mongodb://my_db_user:my_super_secure_pw1@ds123456.mlab.com:12345/my-db-name`
+1. Sign up for a free [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register)
+2. You will be forwarded to the *Create New Cluster* view. Otherwise, navigate to Clusters > Build a Cluster.
+3. Choose the cloud provider *aws* and the region *Ireland (eu-west-1)* (important for compatibility with Heroku!). Keep all other default settings (e.g., M0 Sandbox free tier, cluster name *Cluster0*) and click *Create Cluster* (takes a few minutes).
+4. Click the *Connect* button
+5. Click the *Add a Different IP Address* button, enter `0.0.0.0/0` for the IP Address and click *Add IP Address* button. (**Warning:** limit IP addresses in real production deployment!)
+6. Create a new MongoDB user by entering *Username* and *Password* (avoid special characters for mongoose compatibility) and clicking the button *Create MongoDB User*.
+7. Continue with *Choose a connection method*
+8. Choose *Connect Your Application*
+9. Keep the default driver version (Node.js, 3.0 or later) and click the *Copy* button for the Connection String only.
+10. Replace the `<password>` placeholder with your user password and the database name `test` with a sensible name for your application domain. Example:
+
+```none
+mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority
+```
 
 Find a more detailed tutorial [here](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database).
 
@@ -30,12 +35,13 @@ Find a more detailed tutorial [here](https://developer.mozilla.org/en-US/docs/Le
 
 Sign up for a free [Heroku account](https://signup.heroku.com/).
 
-Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and follow these steps:
+Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), login via `heroku login`, and follow these steps:
 
 ```bash
+cd group-00-web
 # Optional app name: heroku apps:create my-app-name --region eu
 heroku apps:create --region eu
-heroku config:set MONGODB_URI='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'
+heroku config:set MONGODB_URI='mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority'
 heroku config:set NODE_ENV='production'
 export API_ENDPOINT="$(heroku apps:info -s  | grep web_url | cut -d= -f2)api"
 heroku config:set VUE_APP_API_ENDPOINT=$API_ENDPOINT
