@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="camels">
     <h1>List of {{ camels.length }} camels</h1>
     <b-button type="button" class="createButton" @click="createCamel()">Create Camel</b-button>
     <b-list-group>
@@ -81,6 +81,11 @@ a {
   color: #42b983;
 }
 .createButton {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+}
+.camels {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2em;
 }
 </style>
