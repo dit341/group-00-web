@@ -37,7 +37,7 @@ npm start
 
 ## Run the Postman Tests
 
-Starts a new server on another port (default `3001`) and runs the `server` postman test collection against a test database (default `server_test`).
+Starts a new server on another port (default `3001`) and runs the `server` postman test collection against a test database (default `serverTestDB`).
 
 ```bash
 npm test
