@@ -67,10 +67,11 @@ npm run lint
 
 ## Debug in VSCode with Chrome
 
-1. Set a breakpoint in VSCode
-2. Serve the client `npm run serve`
-3. In the menu: Debug > Start Debugging (F5).
+1. **[VSCode]** Set a breakpoint in your Javascript code
+2. **[Terminal]** Run `npm run serve` to serve the client
+3. **[VSCode]** Select *Debug > Start Debugging (F5)* to automatically start a debug session in Chrome[<sup>1</sup>](#1)
+4. **[Chrome]** Browse in Chrome to trigger your breakpoint and the focus will jump back to VSCode
 
-More infos in the [Vuejs Debug Docs](https://vuejs.org/v2/cookbook/debugging-in-vscode.html).
+Find illustrated instructions in the [Vuejs Debug Docs](https://vuejs.org/v2/cookbook/debugging-in-vscode.html).
 
-> Chrome will launch with a separate user profile in a temp folder as described in the VSCode [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome). It is recommended to install the [vue-devtools](https://github.com/vuejs/vue-devtools) [Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) there.
+<a class="anchor" id="1"><sup>1</sup></a> Chrome will launch with a separate user profile (not to mess up with your familiar daily Chrome profile) in a temp folder as described in the VSCode [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome). It is recommended to install the [vue-devtools](https://github.com/vuejs/vue-devtools) [Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) there.
