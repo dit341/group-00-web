@@ -17,7 +17,7 @@ You can also use alternative tools if you know how to configure them (e.g., Fire
     * `git config --global user.name "YOUR_USERNAME"` => check `git config --global user.name`
     * `git config --global user.email "email@example.com"` => check `git config --global user.email`
   * > **Windows users**: We recommend to use the [Git Bash](https://www.atlassian.com/git/tutorials/git-bash) shell from your Git installation or the Bash shell from the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run all shell commands for this project.
-* [Chalmers GitLab](https://git.ita.chalmers.se/) => Login with your **Chalmers CID** (contact [support@chalmers.se](mailto:support@chalmers.se) if you don't have one)
+* [Chalmers GitLab](https://git.ita.chalmers.se/) => Login with your **Chalmers CID** choosing "Sign in with" **Chalmers Login**. (contact [support@chalmers.se](mailto:support@chalmers.se) if you don't have one)
   * DIT341 course group: https://git.ita.chalmers.se/courses/dit341
   * [Setup SSH key with Gitlab](https://docs.gitlab.com/ee/ssh/)
     * Create an SSH key pair `ssh-keygen -t ed25519 -C "email@example.com"` (skip if you already have one)
