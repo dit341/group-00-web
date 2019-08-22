@@ -32,9 +32,7 @@ You can also use alternative tools if you know how to configure them (e.g., Fire
 ## Getting started
 
 ```bash
-# Without Gitlab Registration
-git clone https://git.ita.chalmers.se/courses/dit341/group-00-web
-# With Gitlab Registration
+# Clone repository
 git clone git@git.ita.chalmers.se:courses/dit341/group-00-web.git
 
 # Change into the directory
