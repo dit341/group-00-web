@@ -6,14 +6,14 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 
 * Free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account
 * Free [Heroku](https://www.heroku.com/) account
-* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+* [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) (Windows users might need to restart their VSCode and/or computer to ensure that Heroku is in their PATH. For `bash: heroku: command not found`, checkout [this](https://stackoverflow.com/a/38746507/6875981) StackOverflow answer.)
 
 > All these services have a **free** tier and can be used **WITHOUT** a credit card.
 
 ## Setup Hosted MongoDB
 
 1. Sign up for a free [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register)
-2. You will be forwarded to the *Create New Cluster* view. Otherwise, navigate to Clusters > Build a Cluster.
+2. You will be forwarded to the *Create New Cluster* view. Otherwise, navigate to Clusters > Build a Cluster. NOTE: Maybe you need to create an organization and project first.
 3. Choose the cloud provider *aws* and the region *Ireland (eu-west-1)* (important for compatibility with Heroku!). Keep all other default settings (e.g., M0 Sandbox free tier, cluster name *Cluster0*) and click *Create Cluster* (takes a few minutes).
 4. Click the *Connect* button
 5. Click the *Add a Different IP Address* button, enter `0.0.0.0/0` for the IP Address and click *Add IP Address* button. (**Warning:** limit IP addresses in real production deployment!)

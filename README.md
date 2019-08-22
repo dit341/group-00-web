@@ -1,5 +1,7 @@
 # Backend and Frontend Template
 
+Latest version: https://git.ita.chalmers.se/courses/dit341/group-00-web [Github mirror](https://github.com/dit341/group-00-web)
+
 * [Server](./server/README.md) backend
   * [FAQ](./server/docs/FAQ.md)
   * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
