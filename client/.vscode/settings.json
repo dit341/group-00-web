@@ -5,8 +5,7 @@
     "prettier": {
       // Prettier option here
       "semi": false,
-      "singleQuote": true,
-      "spaceBeforeFunctionParen": true
+      "singleQuote": true
     }
   },
   "eslint.validate": [

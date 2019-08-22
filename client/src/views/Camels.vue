@@ -14,16 +14,16 @@ import CamelItem from '@/components/CamelItem'
 
 export default {
   name: 'Camels',
-  data () {
+  data() {
     return {
       camels: []
     }
   },
-  mounted () {
+  mounted() {
     this.getCamels()
   },
   methods: {
-    getCamels () {
+    getCamels() {
       Api.get('camels')
         .then(reponse => {
           this.camels = reponse.data.camels
@@ -36,7 +36,7 @@ export default {
           // This code is always executed (after success or error).
         })
     },
-    deleteCamel (id) {
+    deleteCamel(id) {
       Api.delete(`/camels/${id}`)
         .then(response => {
           console.log(response.data.message)
@@ -47,7 +47,7 @@ export default {
           console.log(error)
         })
     },
-    createCamel () {
+    createCamel() {
       var randomCamel = {
         color: this.getRandomColor(),
         position: this.getRandomInt(10)
@@ -60,10 +60,10 @@ export default {
           console.log(error)
         })
     },
-    getRandomInt (max) {
+    getRandomInt(max) {
       return Math.floor(Math.random() * max)
     },
-    getRandomColor () {
+    getRandomColor() {
       var colors = ['orange', 'green', 'red', 'blue']
       var index = this.getRandomInt(colors.length)
       return colors[index]

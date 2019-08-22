@@ -24,16 +24,16 @@ import { Api } from '@/Api'
 
 export default {
   name: 'home',
-  data () {
+  data() {
     return {
       message: ''
     }
   },
-  mounted () {
+  mounted() {
     this.getMessage()
   },
   methods: {
-    getMessage () {
+    getMessage() {
       Api.get('/')
         .then(response => {
           this.message = response.data.message
