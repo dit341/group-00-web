@@ -41,10 +41,14 @@ Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), logi
 cd group-00-web
 # Optional app name: heroku apps:create my-app-name --region eu
 heroku apps:create --region eu
-heroku config:set MONGODB_URI='mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority'
-heroku config:set NODE_ENV='production'
+heroku config:set MONGODB_URI="mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority"
+heroku config:set NODE_ENV="production"
+
+# MacOS, Linux
 export API_ENDPOINT="$(heroku apps:info -s  | grep web_url | cut -d= -f2)api"
 heroku config:set VUE_APP_API_ENDPOINT=$API_ENDPOINT
+# Windows
+heroku config:set VUE_APP_API_ENDPOINT=web_url_to_your_herokuapp/api
 ```
 
 To set the API_ENDPOINT, you can also manually extract the `web_url` from `heroku apps:info -s`. For example: `API_ENDPOINT=https://aqueous-crag-12345.herokuapp.com/api`
