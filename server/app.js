@@ -32,11 +32,11 @@ app.use(morgan('dev'));
 app.options('*', cors());
 app.use(cors());
 
-// Define routes
+// Import routes
 app.get('/api', function(req, res) {
     res.json({'message': 'Welcome to your DIT341 backend ExpressJS project!'});
 });
-app.use('/api/camels', camelsController);
+app.use(camelsController);
 
 // Catch all non-error handler for api (i.e., 404 Not Found)
 app.use('/api/*', function (req, res) {

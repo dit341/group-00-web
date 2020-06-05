@@ -3,7 +3,7 @@ var router = express.Router();
 var Camel = require('../models/camel');
 
 // Return a list of all camels
-router.get('/', function(req, res, next) {
+router.get('/api/camels', function(req, res, next) {
     Camel.find(function(err, camels) {
         if (err) { return next(err); }
         res.json({'camels': camels});
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 // Create a new camel
-router.post('/', function(req, res, next) {
+router.post('/api/camels', function(req, res, next) {
     var camel = new Camel(req.body);
     camel.save(function(err) {
         if (err) { return next(err); }
@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
 });
 
 // Return the camel with the given ID
-router.get('/:id', function(req, res, next) {
+router.get('/api/camels/:id', function(req, res, next) {
     var id = req.params.id;
     Camel.findById(id, function(err, camel) {
         if (err) { return next(err); }
@@ -32,7 +32,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 // Delete the camel with the given ID
-router.delete('/:id', function(req, res, next) {
+router.delete('/api/camels/:id', function(req, res, next) {
     var id = req.params.id;
     Camel.findOneAndDelete({_id: id}, function(err, camel) {
         if (err) { return next(err); }
