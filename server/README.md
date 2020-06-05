@@ -2,8 +2,20 @@
 
 This [ExpressJS](https://expressjs.com/) template provides the basic infrastructure for a JSON API with MongoDB persistency with [Mongoose](https://mongoosejs.com/).
 
-* [FAQ](docs/FAQ.md)
-* [Troubleshooting](docs/TROUBLESHOOTING.md)
+## Server Structure
+
+| File        | Purpose           | What you do?  |
+| ------------- | ------------- | ----- |
+| [app.js](./app.js) | JavaScript entry point for Express application | Import new routes/controllers |
+| [controllers/camels.js](controllers/camels.js) | Implementation of Express endpoints | Define new route handlers |
+| [docs/FAQ.md](docs/FAQ.md) | List of FAQs | Find answers to common questions |
+| [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | List of problems and solutions | Find solutions for common error messages |
+| [models/camel.js](models/camel.js) | [Mongoose](https://mongoosejs.com/) models | Define data schema |
+| [package.json](package.json) | Project meta-information | Nothing to change, everything pre-configured :) |
+| [tests/server.postman_collection.json](tests/server.postman_collection.json) | [Postman test scripts](https://learning.postman.com/docs/postman/scripts/test-scripts/) | Replace with your exported Postman test collection |
+| [README.md](./README.md) | Explain how to setup the server | **READ ME** carefully! |
+
+> NOTE: The (mandatory) exercises are essential for understanding this template and will *save* you time!
 
 ## Requirements
 
