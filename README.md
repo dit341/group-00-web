@@ -2,6 +2,8 @@
 
 Latest version: https://git.ita.chalmers.se/courses/dit341/group-00-web (public Github [mirror](https://github.com/dit341/group-00-web))
 
+## Quicklinks
+
 * [Server](./server/README.md) backend
   * [FAQ](./server/docs/FAQ.md)
   * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
@@ -50,3 +52,31 @@ npm run serve
 ## Visual Studio Code (VSCode)
 
 Open the `server` and `client` in separate VSCode workspaces or open the combined [backend-frontend.code-workspace](./backend-frontend.code-workspace). Otherwise, workspace-specific settings don't work properly.
+
+## System Overview (MS1)
+
+### Purpose
+
+3-5 sentences describing what the system does
+
+### Pages
+
+* Home: 1-3 sentences describing what the page displays and what a user can do
+* PAGE2: ...
+
+### Entity-Relationship (ER) Diagram
+
+![ER Diagram](/images/er_diagram.png?raw=true "ER Diagram")
+
+### Entities
+
+* ENTITY1: 1-2 sentences describing ENTITY1
+* ENTITY1: ...
+
+### Relationships
+
+* ENTITY1=>ENTITY2: 2-3 sentences describing how ENTITY1 relates to ENTITY2 and what operations are possible
+
+## Teaser (MS3)
+
+![Teaser](/images/teaser.png?raw=true "Teaser")
