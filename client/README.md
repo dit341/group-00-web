@@ -6,7 +6,6 @@ This [Vue.js](https://vuejs.org/) template provides sample code how to connect t
 
 | File        | Purpose           | What you do?  |
 | ------------- | ------------- | ----- |
-| [package.json](package.json) | Project meta-information | —|
 | [README.md](./README.md) | Everything about the client | **READ ME** carefully! |
 | [public/favicon.ico](public/favicon.ico) | [Favicon](https://en.wikipedia.org/wiki/Favicon) website icon | — |
 | [public/index.html](public/index.html) | Static HTML entry point page | — |
@@ -21,7 +20,8 @@ This [Vue.js](https://vuejs.org/) template provides sample code how to connect t
 | [src/views/](src/views) | Vue components that are separate pages/views | Add new routes/pages/views |
 | [src/views/Camels.vue](src/views/Camels.vue) | Camels page/view | Delete this template example |
 | [src/views/Home.vue](src/views/Home.vue) | Home page/view | Replace with your home page/view |
-| [src/vue.config.js](src/vue.config.js) | Vue configuration | — |
+| [package.json](package.json) | Project meta-information | —|
+| [vue.config.js](vue.config.js) | Vue configuration | — |
 
 > NOTE: The (mandatory) exercises are essential for understanding this template and will *save* you time!
 

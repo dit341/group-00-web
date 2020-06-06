@@ -2,14 +2,16 @@
 
 Latest version: https://git.ita.chalmers.se/courses/dit341/group-00-web (public Github [mirror](https://github.com/dit341/group-00-web))
 
-## Quicklinks
+## Project Structure
 
-* [Server](./server/README.md) backend
-  * [FAQ](./server/docs/FAQ.md)
-  * [Troubleshooting](./server/docs/TROUBLESHOOTING.md)
-* [Client](./client/README.md) frontend
-* [Deployment](./docs/DEPLOYMENT.md)
-* [Local Deployment](./docs/LOCAL_DEPLOYMENT.md)
+| File        | Purpose           | What you do?  |
+| ------------- | ------------- | ----- |
+| [server/](server) | Backend server code | All your server code |
+| [server/README.md](server/README.md) | Everything about the server | **READ ME** carefully! |
+| [client/](client) | Frontend client code | All your client code |
+| [client/README.md](client/README.md) | Everything about the client | **READ ME** carefully! |
+| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Free online production deployment | Deploy your app online in production mode |
+| [docs/LOCAL_DEPLOYMENT.md](docs/LOCAL_DEPLOYMENT.md) | Local production deployment | Deploy your app local in production mode |
 
 ## Requirements
 

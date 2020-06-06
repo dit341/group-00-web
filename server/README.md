@@ -6,14 +6,14 @@ This [ExpressJS](https://expressjs.com/) template provides the basic infrastruct
 
 | File        | Purpose           | What you do?  |
 | ------------- | ------------- | ----- |
+| [README.md](./README.md) | Everything about the server | **READ ME** carefully! |
 | [app.js](./app.js) | JavaScript entry point for Express application | Import new routes/controllers |
 | [controllers/camels.js](controllers/camels.js) | Implementation of Express endpoints | Define new route handlers |
+| [models/camel.js](models/camel.js) | [Mongoose](https://mongoosejs.com/) models | Define data schema |
+| [tests/server.postman_collection.json](tests/server.postman_collection.json) | [Postman test scripts](https://learning.postman.com/docs/postman/scripts/test-scripts/) | Replace with your exported Postman test collection |
 | [docs/FAQ.md](docs/FAQ.md) | List of FAQs | Find answers to common questions |
 | [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | List of problems and solutions | Find solutions for common error messages |
-| [models/camel.js](models/camel.js) | [Mongoose](https://mongoosejs.com/) models | Define data schema |
 | [package.json](package.json) | Project meta-information | — |
-| [tests/server.postman_collection.json](tests/server.postman_collection.json) | [Postman test scripts](https://learning.postman.com/docs/postman/scripts/test-scripts/) | Replace with your exported Postman test collection |
-| [README.md](./README.md) | Everything about the server | **READ ME** carefully! |
 
 > NOTE: The (mandatory) exercises are essential for understanding this template and will *save* you time!
 
