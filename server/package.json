@@ -31,10 +31,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.1",
-    "newman": "^4.6.1",
-    "nodemon": "^1.19.4",
+    "cross-env": "^7.0.2",
+    "newman": "^5.0.1",
+    "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
-    "wait-on": "^3.3.0"
+    "wait-on": "^5.0.0"
   }
 }
