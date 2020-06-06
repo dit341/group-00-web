@@ -11,11 +11,13 @@ This [ExpressJS](https://expressjs.com/) template provides the basic infrastruct
 | [docs/FAQ.md](docs/FAQ.md) | List of FAQs | Find answers to common questions |
 | [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | List of problems and solutions | Find solutions for common error messages |
 | [models/camel.js](models/camel.js) | [Mongoose](https://mongoosejs.com/) models | Define data schema |
-| [package.json](package.json) | Project meta-information | Nothing to change, everything pre-configured :) |
+| [package.json](package.json) | Project meta-information | — |
 | [tests/server.postman_collection.json](tests/server.postman_collection.json) | [Postman test scripts](https://learning.postman.com/docs/postman/scripts/test-scripts/) | Replace with your exported Postman test collection |
-| [README.md](./README.md) | Explain how to setup the server | **READ ME** carefully! |
+| [README.md](./README.md) | Everything about the server | **READ ME** carefully! |
 
 > NOTE: The (mandatory) exercises are essential for understanding this template and will *save* you time!
+
+Optional: Learn how to create such a project template in this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website).
 
 ## Requirements
 

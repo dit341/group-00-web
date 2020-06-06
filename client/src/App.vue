@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/camels">Camels</router-link>
     </div>
+    <!-- Render the content of the current page view -->
     <router-view/>
   </div>
 </template>
