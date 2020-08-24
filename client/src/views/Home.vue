@@ -1,20 +1,10 @@
 <template>
   <div>
-    <b-jumbotron header="DIT341 Frontend" lead="Welcome to Your DIT341 Frontend Vue.js App">
-      <p>Message from the server: {{ message }}</p>
-      <b-button variant="primary" href="/camels">List Camels</b-button>
+    <b-jumbotron header="DIT341 Frontend" lead="Welcome to your DIT341 Frontend Vue.js App">
+      <b-button class="btn_message" variant="primary" v-on:click="getMessage()" >Get Message from Server</b-button>
+      <p>Message from the server:<br/>
+      {{ message }}</p>
     </b-jumbotron>
-    <b-container>
-      <b-row>
-        <b-col><h1>Responsive BootstrapVue: <a href="https://bootstrap-vue.js.org/docs/components/layout/">Layout and Grid System</a></h1></b-col>
-      </b-row>
-      <!-- Mobile (< 768px): stack columns by making one half-width and one full-width
-           Desktop (>= 768px): keep both columns in same row in 4:8 ratio -->
-      <b-row>
-        <b-col class="example-col" cols="6" md="4">Message from the server</b-col>
-        <b-col class="example-col" cols="12" md="8">{{ message }}</b-col>
-      </b-row>
-    </b-container>
   </div>
 </template>
 
@@ -26,11 +16,8 @@ export default {
   name: 'home',
   data() {
     return {
-      message: ''
+      message: 'none'
     }
-  },
-  mounted() {
-    this.getMessage()
   },
   methods: {
     getMessage() {
@@ -47,10 +34,7 @@ export default {
 </script>
 
 <style>
-.example-col {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: whitesmoke;
-  border: 2px solid lightgray;
+.btn_message {
+  margin-bottom: 1em;
 }
 </style>

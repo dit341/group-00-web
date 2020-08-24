@@ -9,7 +9,7 @@ if (!mongoURI) {
 }
 
 // Drop database
-mongoose.connect(mongoURI, { useNewUrlParser: true }, function (err) {
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }, function (err) {
     if (err) {
         console.error(`Failed to connect to MongoDB with URI: ${mongoURI}`);
         console.error(err.stack);
