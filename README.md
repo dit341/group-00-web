@@ -51,6 +51,8 @@ cd client && npm install
 npm run serve
 ```
 
+> Check out the detailed instructions for [backend](./server/README.md) and [frontend](./client/README.md).
+
 ## Visual Studio Code (VSCode)
 
 Open the `server` and `client` in separate VSCode workspaces or open the combined [backend-frontend.code-workspace](./backend-frontend.code-workspace). Otherwise, workspace-specific settings don't work properly.
