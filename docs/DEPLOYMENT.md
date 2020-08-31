@@ -13,19 +13,19 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 ## Setup Hosted MongoDB
 
 1. Sign up for a free [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register)
-2. You will be forwarded to the *Create New Cluster* view. Otherwise, navigate to Clusters > Build a Cluster. NOTE: Maybe you need to create an organization and project first.
+2. You will be forwarded to the *Create New Cluster* view. Otherwise, navigate to Clusters > Build a Cluster.<br/> NOTE: Maybe you need to create an organization and project first.
 3. Choose the cloud provider *aws* and the region *Ireland (eu-west-1)* (important for compatibility with Heroku!). Keep all other default settings (e.g., M0 Sandbox free tier, cluster name *Cluster0*) and click *Create Cluster* (takes a few minutes).
 4. Click the *Connect* button
-5. Click the *Add a Different IP Address* button, enter `0.0.0.0/0` for the IP Address and click *Add IP Address* button. (**Warning:** limit IP addresses in real production deployment!)
+5. Click the *Add a Different IP Address* button, enter `0.0.0.0/0` for the IP Address and click *Add IP Address* button.<br/> (**Warning:** limit IP addresses in real production deployments!)
 6. Create a new MongoDB user by entering *Username* and *Password* (avoid special characters for mongoose compatibility) and clicking the button *Create MongoDB User*.
 7. Continue with *Choose a connection method*
 8. Choose *Connect Your Application*
 9. Keep the default driver version (Node.js, 3.0 or later) and click the *Copy* button for the Connection String only.
-10. Replace the `<password>` placeholder with your user password and the database name `test` with a sensible name for your application domain. Example:
+10. Replace the placeholders `<password>` with your MongoDB user password (created in step 6.) and the database name `<dbname>` with a sensible name for your application domain. Example:
 
-```none
-mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority
-```
+    ```none
+    mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority
+    ```
 
 Find a more detailed tutorial [here](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database).
 
