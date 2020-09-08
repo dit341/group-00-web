@@ -67,6 +67,11 @@ We use the API testing tool Postman to define example HTTP requests and test ass
 
 > Remember to **export and commit** any test changes back to `tests/server.postman_collection.json` and make sure `npm test` succeeds for your final submission!
 
+## Error Handling
+
+* [Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
+* [Error Handling in Express.js](https://expressjs.com/en/guide/error-handling.html)
+
 ## Debugging with VSCode
 
 Set a breakpoint and click *Debug > Start Debugging*
