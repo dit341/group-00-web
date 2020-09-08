@@ -17,11 +17,11 @@ These steps describe how you can deploy your app online for free (**NO** credit 
 3. Choose the cloud provider *aws* and the region *Ireland (eu-west-1)* (important for compatibility with Heroku!). Keep all other default settings (e.g., M0 Sandbox free tier, cluster name *Cluster0*) and click *Create Cluster* (takes a few minutes).
 4. Click the *Connect* button
 5. Click the *Add a Different IP Address* button, enter `0.0.0.0/0` for the IP Address and click *Add IP Address* button.<br/> (**Warning:** limit IP addresses in real production deployments!)
-6. Create a new MongoDB user by entering *Username* and *Password* (avoid special characters for mongoose compatibility) and clicking the button *Create MongoDB User*.
+6. Create a new Database user by entering *Username* and *Password* (avoid special characters for mongoose compatibility) and clicking the button *Create Database User*.
 7. Continue with *Choose a connection method*
 8. Choose *Connect Your Application*
-9. Keep the default driver version (Node.js, 3.0 or later) and click the *Copy* button for the Connection String only.
-10. Replace the placeholders `<password>` with your MongoDB user password (created in step 6.) and the database name `<dbname>` with a sensible name for your application domain. Example:
+9. Keep the default driver version (Node.js, 3.6 or later) and click the *Copy* button for the Connection String only.
+10. Replace the placeholders `<password>` with your Database user password (created in step 6.) and the database name `<dbname>` with a sensible name for your application domain. Example:
 
     ```none
     mongodb+srv://myUser:mySecurePassword@cluster0-a1bc2.mongodb.net/animalProductionDB?retryWrites=true&w=majority
