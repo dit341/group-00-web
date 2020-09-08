@@ -53,22 +53,27 @@
 
     ![Postman run tests](./img/test_run.png)
 
+## Test script assertions
+
+* [Test script examples](https://learning.postman.com/docs/writing-scripts/script-references/test-examples/)
+
 ## Chaining Requests via Postman Variables
 
 > Make sure your test collection works on an empty database!
 
 Whenever you create an object that you want to use later (e.g., to retrieve, update, delete), you need to save its `_id` to a Postman environment variable for later re-use:
 
-1. Save the `_id` of created objects for later request
+1. Save the `_id` of created objects for later request via `pm.environment.set("camel_id", jsonData._id);`
 
     ![Postman save id](./img/postman_variable_save.png)
 
-2. Use variables in *later* requests
+2. Use variables in *later* requests in Postman via `{{camel_id}}` or in Postman scripts or via `pm.variables.get("camel_id");`
 
     ![Postman use variable](./img/postman_variable_use.png)
 
 Check out the following documentation for more info:
 
 * [Extracting data from responses and chaining requests](http://blog.getpostman.com/2014/01/27/extracting-data-from-responses-and-chaining-requests/)
+  * NOTE: Uses the deprecated environment variable syntax. Replace `postman.setEnvironmentVariable(...)` with `pm.environment.set(...)`
 * [Example in the express-rest-api tutorial used in the lecture](https://git.chalmers.se/courses/dit341/express-rest-api)
 * [Postman detailed docs about variables](https://learning.postman.com/docs/sending-requests/variables/)
