@@ -74,6 +74,7 @@ We use the API testing tool Postman to define example HTTP requests and test ass
 
 ## Debugging with VSCode
 
-Set a breakpoint and click *Debug > Start Debugging*
+1. Set a breakpoint by clicking on the left side of a line number
+2. Click *Run > Start Debugging* (Choose the "Debug Server" config if you opened the combined workspace)
 
 > Learn more in the [VSCode Debugging Docs](https://code.visualstudio.com/docs/editor/debugging).
