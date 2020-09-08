@@ -70,16 +70,15 @@ heroku logs --tail # Show current logs and keep updating with any new results
 heroku ps   # Display dyno status
 ```
 
-## Automatically Deploy to Heroku with Gitlab
+## Automatically Deploy to Heroku with GitLab
 
-This setup automatically deploys the latest version to Heroku after each successful pipeline of the master branch.
+This setup automatically deploys the latest commit in the master branch to Heroku if the tests succeed:
 
-1. Open the GitLab settings `Settings > Environment Variables` (e.g., https://git.ita.chalmers.se/courses/dit341/group-00-web/settings/ci_cd)
-2. Add the key `HEROKU_APP_NAME` with the value: `Name` of your app visible in the Heroku app settings https://dashboard.heroku.com/apps/your-app-name/settings
-3. Add the key `HEROKU_API_KEY` with value: `API Key` of your Heroku account in the Heroku account settings: https://dashboard.heroku.com/account
-4. Save variables
+1. Open the GitLab settings `Settings > CI / CD > Variables` (e.g., https://git.chalmers.se/courses/dit341/group-00-web/-/settings/ci_cd)
+2. Add a variable with the key `HEROKU_APP_NAME`. As value, enter the name of your app shown on the first line when running `heroku apps:info`. It is also visible in the Heroku app settings (https://dashboard.heroku.com/apps/your-app-name/settings). Example above: `aqueous-crag-12345`
+3. Add a variable with the key `HEROKU_API_KEY`. As value, enter the `API Key` of your Heroku account in the Heroku account settings (https://dashboard.heroku.com/account). You can enable "Mask variable" to protect your secret API key.
 
-> Deployment will only be triggered for the master branch and when both HEROKU keys are configured.
+> Deployment will only be triggered for the master branch and when both HEROKU variables are configured.
 
 A HelloWorld tutorial can be found here: [Deploy Node.js App with GitLab CI/CD](https://medium.com/@seulkiro/deploy-node-js-app-with-gitlab-ci-cd-214d12bfeeb5)
 
