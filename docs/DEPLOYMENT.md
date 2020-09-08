@@ -53,7 +53,7 @@ heroku config:set VUE_APP_API_ENDPOINT=web_url_to_your_herokuapp/api
 
 To set the API_ENDPOINT, you can also manually extract the `web_url` from `heroku apps:info -s`. For example: `API_ENDPOINT=https://aqueous-crag-12345.herokuapp.com/api`
 
-> The app needs to be re-deployed whenever `VUE_APP_API_ENDPOINT` is updated (e.g., when the Heroku app name changed).
+> The app needs to be re-deployed whenever `VUE_APP_API_ENDPOINT` is updated (e.g., when the Heroku app name changed). Therefore, you might need to push a new commit to master to trigger a full re-deployment.
 
 ### Deploy
 
@@ -67,7 +67,7 @@ heroku open
 ```bash
 heroku logs  # Show current logs
 heroku logs --tail # Show current logs and keep updating with any new results
-heroku ps   #Display dyno status
+heroku ps   # Display dyno status
 ```
 
 ## Automatically Deploy to Heroku with Gitlab
