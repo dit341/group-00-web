@@ -58,7 +58,8 @@ app.use(function(err, req, res, next) {
         'error': {}
     };
     if (env === 'development') {
-        err_res['error'] = err;
+        // Return sensitive stack trace only in dev mode
+        err_res['error'] = err.stack;
     }
     res.status(err.status || 500);
     res.json(err_res);
