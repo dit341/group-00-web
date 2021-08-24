@@ -28,7 +28,7 @@ Optional: Learn how to create such a project template in this [tutorial](https:/
 ## Requirements
 
 * [Server](../server/README.md) backend running on `http://localhost:3000`
-* [Node.js](https://nodejs.org/en/download/) (v12) => installation instructions for [Linux](https://github.com/nodesource/distributions)
+* [Node.js](https://nodejs.org/en/download/) (v14) => installation instructions for [Linux](https://github.com/nodesource/distributions)
 * [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as IDE
   * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) plugin for Vue tooling
   * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugin for linting Vue, JS, and HTML code
