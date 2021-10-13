@@ -14,5 +14,13 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint'
-  }
+  },
+  // Workaround to prevent false positive error "eslint (vue/comment-directive)" in plain HTML:
+  // https://github.com/vuejs/eslint-plugin-vue/issues/1355#issuecomment-735557202
+  overrides: [
+    {
+      files: ['*.html'],
+      processor: 'vue/.vue'
+    }
+  ]
 }
